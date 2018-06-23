@@ -5,7 +5,6 @@ from requests.auth import HTTPBasicAuth
 from django.contrib.auth.models import User
 from .models import Message
 
-
 # Create your views here.
 TWIZO_TEST_API_KEY = 'ZxPqBHSjoJiqkBHnJng7v0A6NPR0z6Uh-HlryfH_uD93S2Id'
 TWIZO_REAL_API_KEY = 'FWPBuRPbcZ0HhOqT0OauK-KNfb1x4IRw8SaprZLsyUzL-qpP'
@@ -29,8 +28,7 @@ def request_payment_and_send_conf(request, user_id):
 
     return JsonResponse({"messageID": messageID})
 
-def confirm_token(request, messageID):
-    token = request.GET.get('token', '')
+def confirm_token(request, messageID, token):
     api_url= "https://api-asia-01.twizo.com/verification/submit/"+ messageID + "?token="+token
 
     headers= {"Accept" : "application/json", "Content-Type": "application/json; charset=utf8"}

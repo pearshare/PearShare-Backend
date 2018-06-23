@@ -5,7 +5,7 @@ from .views import request_payment_and_send_conf, confirm_token
 
 urlpatterns = [
     path('twizo/confirm/<int:user_id>', request_payment_and_send_conf),
-    path('twizo/check/<slug:messageID>', confirm_token),
+    path('twizo/check/<slug:messageID>/<int:token>', confirm_token),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

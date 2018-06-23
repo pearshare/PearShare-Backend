@@ -9,6 +9,9 @@ from .models import Message
 TWIZO_TEST_API_KEY = 'ZxPqBHSjoJiqkBHnJng7v0A6NPR0z6Uh-HlryfH_uD93S2Id'
 TWIZO_REAL_API_KEY = 'FWPBuRPbcZ0HhOqT0OauK-KNfb1x4IRw8SaprZLsyUzL-qpP'
 
+def get_message_id(request, user_id):
+    return JsonResponse({"messageId": User.objects.get(id=user_id).message_set.latest().messageID })
+
 def request_payment_and_send_conf(request, user_id):
     phone_num = "6598553351"
     api_url= "https://api-asia-01.twizo.com/verification/submit"

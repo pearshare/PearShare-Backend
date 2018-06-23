@@ -8,3 +8,7 @@ class Message(models.Model):
         User,
         on_delete=models.CASCADE
     )
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        get_latest_by = 'created'

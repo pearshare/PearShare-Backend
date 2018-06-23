@@ -8,7 +8,6 @@ class ItemSerializer(serializers.ModelSerializer):
       
     class Meta:
         model = Item
-        owner = serializers.ReadOnlyField(source='owner.username')
         fields = ('id', 'title', 'image_b64_addr', 'description', 'seller', \
-        'price', 'sold', 'best_before_date', 'created', 'modified')
+        'price', 'status', 'best_before_date', 'created', 'modified')
 

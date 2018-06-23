@@ -14,7 +14,7 @@ class Item(models.Model):
         on_delete=models.CASCADE
     )
     price = models.DecimalField(max_digits=5, decimal_places=2)
-    sold= models.BooleanField(default=False)
+    status = models.CharField(max_length=60, default="unsold")
     best_before_date = models.DateField(auto_now_add=False, auto_now=False)
 
     created = models.DateTimeField(auto_now_add=True)

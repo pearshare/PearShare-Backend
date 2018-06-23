@@ -11,10 +11,12 @@ class Item(models.Model):
         on_delete=models.CASCADE
     )
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    sold= models.BooleanField(default=False)
     best_before_date = models.DateField(auto_now_add=False, auto_now=False)
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
 
     def __str__(self):
         return self.title

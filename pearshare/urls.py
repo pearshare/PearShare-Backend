@@ -20,4 +20,6 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('items.urls')),
+    url(r'^', include('twizo.urls')),
+
 ]

@@ -2,8 +2,8 @@ import requests
 import json
 from requests.auth import HTTPBasicAuth
 
-TWIZO_TEST_API_KEY = 'OVSXDvByaLF9GxXebEUHelIxY7IemJwRyn6iPzEqZA5SRZvI'
-TWIZO_REAL_API_KEY = 'VkuCjRhaiZAoiDZ2yCJ6HGdS9o6dOkI9cbnArfV7jl6j2nQT'
+TWIZO_TEST_API_KEY = 'ZxPqBHSjoJiqkBHnJng7v0A6NPR0z6Uh-HlryfH_uD93S2Id'
+TWIZO_REAL_API_KEY = 'FWPBuRPbcZ0HhOqT0OauK-KNfb1x4IRw8SaprZLsyUzL-qpP'
 URL = 'https://api-asia-01.twizo.com/v1/verification/submit'
 phone_number = "6598553351"
 
